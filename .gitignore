@@ -24,3 +24,11 @@ Homestead.yaml
 Thumbs.db
 
 /information
+
+.gitignore
+.gitattributes
+
+/public
+
+
+.test
