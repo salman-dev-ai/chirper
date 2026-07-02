@@ -7,18 +7,34 @@ use App\Models\Chirp;
 
 class ChirpController extends Controller
 {
-    public function index(){
-        // $chirps=[
-        //     ['author'=>'John Doe','message'=>'Hello World!','time'=>'1 minutes ago'],
-        //     ['author'=>'Jane Doe','message'=>'Hello Laravel!','time'=> '1 hour'],
-        //     ['author'=>'Jane Doe','message'=>'Hello Laravel!','time'=> '1 hour'],
-        //     ['author'=>'Jane Doe','message'=>'Hello Laravel!','time'=> '1 hour'],
+    // git data
+    public function index()
+    {
 
-        // ];
-        $chirps= Chirp::with('user')
-        ->latest()
-        ->take(10)->get();
-    
-        return view("home",["chirps"=>$chirps]);
+        $chirps = Chirp::with('user')
+            ->latest()
+            ->take(10)->get();
+
+        return view("home", ["chirps" => $chirps]);
+    }
+
+    public function  store(Request $request)
+    {
+        $validated = $request->validate(
+            [
+                'message' => 'required|string|max:255',
+            ],
+            [
+                'message.required' => 'Please write something to chirp!',
+                'message.max' => 'Chirps must be 255 characters or less.',
+            ]
+        );
+
+        \App\Models\Chirp::create([
+            'message' => $validated['message'],
+            'user_id' => null,
+        ]);
+
+        return redirect('/')->with('success', 'Chirp created!');
     }
 }
