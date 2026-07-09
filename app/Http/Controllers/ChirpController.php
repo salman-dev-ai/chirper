@@ -26,7 +26,7 @@ class ChirpController extends Controller
         ]);
 
         // Use the authenticated user
-        auth()->user()->chirps()->create($validated);
+        auth()->user->chirps()->create($validated);
 
         return redirect('/')->with('success', 'Your chirp has been posted!');
     }
@@ -61,7 +61,7 @@ class ChirpController extends Controller
 
     public function destroy(Chirp $chirp)
     {
-        Gate::authorize('update', $chirp);
+        Gate::authorize('delete', $chirp);
 
         $chirp->delete();
 
