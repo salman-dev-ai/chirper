@@ -11,22 +11,20 @@ Route::get('/', [ChirpController::class, 'index']);
 
 Route::post('/chirps', [ChirpController::class, 'store']);
 
-// Route::get('/chirps/{chirp}/edit',[ChirpController::class,'edit']);
-// // update and delete routes
-// Route::put('/chirps/{chirp}',[ChirpController::class,'update']);
-// Route::delete('/chirps/{chirp}',[ChirpController::class,'destroy']);
-// Route::middleware('auth')->group(function(){
-//     Route::resource('chirps', ChirpController::class)->only(['edit', 'update', 'destroy']);
 
+
+
+// Route::middleware('auth')->group(function () {
+//     Route::post('/chirps', [ChirpController::class, 'store']);
+//     Route::get('/chirps/{chirp}/edit', [ChirpController::class, 'edit']);
+//     Route::put('/chirps/{chirp}', [ChirpController::class, 'update']);
+//     Route::delete('/chirps/{chirp}', [ChirpController::class, 'destroy']);
 // });
 
 Route::middleware('auth')->group(function () {
-    Route::post('/chirps', [ChirpController::class, 'store']);
-    Route::get('/chirps/{chirp}/edit', [ChirpController::class, 'edit']);
-    Route::put('/chirps/{chirp}', [ChirpController::class, 'update']);
-    Route::delete('/chirps/{chirp}', [ChirpController::class, 'destroy']);
+    // هذا السطر يختصر ويعوض عن الأربعة أسطر السابقة بالكامل!
+    Route::resource('chirps', ChirpController::class)->only(['store', 'edit', 'update', 'destroy']);
 });
-
 
 // registration routes
 

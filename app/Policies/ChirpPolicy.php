@@ -29,7 +29,7 @@ class ChirpPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -37,9 +37,11 @@ class ChirpPolicy
      */
     public function update(User $user, Chirp $chirp): bool
     {
-        return $chirp->user()->is($user);
+        // return $chirp->user()->is($user);
+                return $chirp->user()->is($user);
+
     }
- 
+
     /**
      * Determine whether the user can delete the model.
      */

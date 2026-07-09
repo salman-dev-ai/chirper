@@ -6,13 +6,13 @@
             @if ($chirp->user)
                 <div class="avatar">
                     <div class="size-10 rounded-full">
-                        <img src="../image/user.png" alt="{{ $chirp->user->name }}'s avatar" class="rounded-full" />
+                        <img src="{{ asset('image/user.png') }}" alt="{{ $chirp->user->name }}'s avatar" class="rounded-full" />
                     </div>
                 </div>
             @else
                 <div class="avatar placeholder">
                     <div class="size-10 rounded-full">
-                        <img src="../image/Anonymous.png" alt="Anonymous User" class="rounded-full" />
+                        <img src="{{ asset('image/anonymous.png') }}" alt="Anonymous User" class="rounded-full" />
                     </div>
                 </div>
             @endif
@@ -35,10 +35,10 @@
                     @can('update', $chirp)
 
                         <div class="flex gap-1">
-                            <a href="/chirps/{{ $chirp->id }}/edit" class="btn btn-ghost btn-xs">
+                            <a href="{{ route('chirps.edit' ,$chirp) }}" class="btn btn-ghost btn-xs">
                                 Edit
                             </a>
-                            <form method="POST" action="/chirps/{{ $chirp->id }}">
+                            <form method="POST" action="{{ route('chirps.destroy',$chirp) }}">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit"
