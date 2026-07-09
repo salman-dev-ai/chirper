@@ -1,66 +1,210 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🐦 Chirper - منصة التدوين المصغر | Micro-blogging Platform
+
+<div dir="rtl">
+
+---
+
+## مرحباً بك في Chirper 👋
+
+**Chirper** هو تطبيق ويب للتدوين المصغر (Micro-blogging) يتيح للمستخدمين نشر التغريدات القصيرة والتواصل مع الآخرين. تم بناء التطبيق بإستخدام إطار العمل Laravel 12 مع واجهة مستخدم جميلة ومتجاوبة.
+
+> **تم التطوير بواسطة:** المهندس **سلمان الانسي**  
+> **Developed by:** Eng. **Salman Al-Ansi**
+
+---
+
+## 📋 المميزات | Features
+
+### 🇦🇪 بالعربية
+- ✅ نظام مصادقة كامل (تسجيل، تسجيل دخول، تسجيل خروج) مع حماية أمنية عالية
+- ✅ نشر التغريدات (Chirps) بحد أقصى 255 حرف
+- ✅ تعديل وحذف التغريدات - فقط لمالك التغريدة
+- ✅ عرض التغريدات مرتبة من الأحدث مع ترقيم الصفحات
+- ✅ واجهة مستخدم عصرية باستخدام **DaisyUI 5** و **Tailwind CSS**
+- ✅ تصميم متجاوب يعمل على جميع الأجهزة
+- ✅ رسائل نجاح وأخطاء تفاعلية للمستخدم
+- ✅ حماية ضد هجمات CSRF و XSS
+- ✅ نظام صلاحيات لتأكيد ملكية التغريدة قبل التعديل أو الحذف
+
+### 🇬🇧 English
+- ✅ Complete authentication system (Register, Login, Logout) with high security
+- ✅ Post short messages (Chirps) with a 255-character limit
+- ✅ Edit and delete chirps - owner-only access
+- ✅ Display chirps sorted by latest with pagination
+- ✅ Modern UI built with **DaisyUI 5** and **Tailwind CSS**
+- ✅ Fully responsive design for all devices
+- ✅ Interactive success and error messages
+- ✅ CSRF & XSS attack protection
+- ✅ Authorization policy to verify chirp ownership before edit/delete
+
+---
+
+## 🛠 التقنيات المستخدمة | Tech Stack
+
+| التقنية | Technology |
+|---------|------------|
+| ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white) | **Laravel 12** - إطار العمل الخلفي (Backend Framework) |
+| ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) | **PHP ^8.2** - لغة البرمجة |
+| ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white) | **SQLite** - قاعدة البيانات (Database) |
+| ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) | **Tailwind CSS** - إطار العمل الأمامي (CSS Framework) |
+| ![DaisyUI](https://img.shields.io/badge/DaisyUI-5A0EF8?style=flat&logo=daisyui&logoColor=white) | **DaisyUI 5** - مكتبة مكونات واجهة المستخدم |
+| ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white) | **Vite** - أداة بناء الواجهة الأمامية |
+
+---
+
+## 🚀 طريقة التشغيل المحلي | Local Installation
+
+### 📦 المتطلبات الأساسية | Prerequisites
+- PHP >= 8.2
+- Composer
+- Node.js & NPM
+- SQLite (مثبت مسبقاً مع PHP)
+
+### ⚙️ خطوات التثبيت | Installation Steps
+
+<div dir="ltr">
+
+```bash
+# 1. استنساخ المشروع | Clone the repository
+git clone https://github.com/salman-dev-ai/chirper.git
+cd chirper
+
+# 2. تثبيت حزم PHP | Install PHP dependencies
+composer install
+
+# 3. إعداد ملف البيئة | Set up environment file
+copy .env.example .env
+# OR: cp .env.example .env (for Linux/Mac)
+
+# 4. توليد مفتاح التطبيق | Generate application key
+php artisan key:generate
+
+# 5. إنشاء قاعدة البيانات | Create SQLite database
+php artisan migrate
+
+# 6. تثبيت حزم الواجهة الأمامية | Install frontend dependencies
+npm install
+
+# 7. بناء الأصول الأمامية | Build frontend assets
+npm run build
+
+# 8. تشغيل الخادم المحلي | Run the development servers
+php artisan serve
+```
+
+</div>
+
+ثم في نافذة طرفية أخرى | Then in another terminal window:
+
+<div dir="ltr">
+
+```bash
+npm run dev
+```
+
+</div>
+
+### 🌐 فتح التطبيق | Access the Application
+افتح المتصفح على الرابط التالي | Open your browser at:
+**http://localhost:8000**
+
+---
+
+## 📸 لقطات الشاشة | Screenshots
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://via.placeholder.com/600x400?text=Chirper+Screenshot" alt="Chirper Screenshot" width="600"/>
+  <br>
+  <em>الصفحة الرئيسية | Home Page</em>
 </p>
 
-## About Laravel
+> 💡 **ملاحظة:** يرجى إضافة لقطات الشاشة الفعلية للمشروع في مجلد `public/screenshots/`
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🗂 هيكل المشروع | Project Structure
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<div dir="ltr">
 
-## Learning Laravel
+```
+chirper/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Auth/
+│   │   │   │   ├── Login.php        # التحكم في تسجيل الدخول
+│   │   │   │   ├── Logout.php       # التحكم في تسجيل الخروج
+│   │   │   │   └── Register.php     # التحكم في التسجيل
+│   │   │   └── ChirpController.php  # التحكم في التغريدات
+│   │   └── ...
+│   ├── Models/
+│   │   ├── User.php                 # نموذج المستخدم
+│   │   └── Chirp.php                # نموذج التغريدة
+│   └── Policies/
+│       └── ChirpPolicy.php          # صلاحيات التغريدات
+├── database/
+│   └── migrations/
+│       └── 2026_07_02_101301_create_chirps_table.php
+├── resources/
+│   └── views/
+│       ├── auth/
+│       │   ├── login.blade.php      # واجهة تسجيل الدخول
+│       │   └── register.blade.php   # واجهة التسجيل
+│       ├── chirps/
+│       │   └── edit.blade.php       # واجهة تعديل التغريدة
+│       ├── components/
+│       │   ├── chirp.blade.php      # مكون عرض التغريدة
+│       │   └── layout.blade.php     # التخطيط العام
+│       └── home.blade.php           # الصفحة الرئيسية
+├── routes/
+│   └── web.php                      # مسارات التطبيق
+└── public/
+    └── image/                       # صور المستخدمين
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+</div>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🔐 الأمان | Security
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- ✅ **CSRF Protection** - جميع النماذج محمية برمز CSRF
+- ✅ **XSS Protection** - استخدام Blade escaping `{{ }}` لمنع هجمات XSS
+- ✅ **Authorization Policies** - صلاحيات للتأكد من ملكية التغريدة
+- ✅ **Session Regeneration** - تجديد الجلسة بعد تسجيل الدخول وتسجيل الخروج
+- ✅ **Password Hashing** - تشفير كلمات المرور بإستخدام Bcrypt
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🤝 المساهمة | Contributing
 
-## Contributing
+نرحب بمساهماتكم! إذا كنت ترغب في المساهمة في تطوير Chirper:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Fork المشروع
+2. أنشئ فرعاً جديداً (`git checkout -b feature/AmazingFeature`)
+3. أضف تغييراتك (`git commit -m 'Add some AmazingFeature'`)
+4. ادفع التغييرات (`git push origin feature/AmazingFeature`)
+5. افتح Pull Request
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 📄 الترخيص | License
 
-## Security Vulnerabilities
+هذا المشروع مرخص تحت رخصة **MIT License**.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 📞 التواصل | Contact
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- **المطور:** المهندس سلمان الانسي | Eng. Salman Al-Ansi
+- **GitHub:** [@salman-dev-ai](https://github.com/salman-dev-ai)
+- **البريد الإلكتروني:** (يُضاف لاحقاً)
 
+---
 
-# run frontend 
-    npm run dev
+<p align="center">
+  <strong>شكراً لاستخدام Chirper! 🐦💙</strong><br>
+  <em>تم التطوير بواسطة المهندس سلمان الانسي - جميع الحقوق محفوظة © 2026</em>
+</p>
 
-# run backend 
-    php artisan
+</div>
