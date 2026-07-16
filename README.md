@@ -28,7 +28,6 @@
 
 ---
 
-## 🛠 التقنيات المستخدمة | Tech Stack
 
 ## 🛠️ Technology Stack
 
