@@ -1,4 +1,4 @@
-# 🐦 Chirper - منصة التدوين المصغر | Micro-blogging Platform
+# 🐦 Chirper - Micro-blogging Platform
 
 <div dir="rtl">
 
@@ -8,23 +8,12 @@
 
 **Chirper** هو تطبيق ويب للتدوين المصغر (Micro-blogging) يتيح للمستخدمين نشر التغريدات القصيرة والتواصل مع الآخرين. تم بناء التطبيق بإستخدام إطار العمل Laravel 12 مع واجهة مستخدم جميلة ومتجاوبة.
 
-> **تم التطوير بواسطة:** المهندس **سلمان الانسي**  
 > **Developed by:** Eng. **Salman Al-Ansi**
 
 ---
 
-## 📋 المميزات | Features
+## Features
 
-### 🇦🇪 بالعربية
-- ✅ نظام مصادقة كامل (تسجيل، تسجيل دخول، تسجيل خروج) مع حماية أمنية عالية
-- ✅ نشر التغريدات (Chirps) بحد أقصى 255 حرف
-- ✅ تعديل وحذف التغريدات - فقط لمالك التغريدة
-- ✅ عرض التغريدات مرتبة من الأحدث مع ترقيم الصفحات
-- ✅ واجهة مستخدم عصرية باستخدام **DaisyUI 5** و **Tailwind CSS**
-- ✅ تصميم متجاوب يعمل على جميع الأجهزة
-- ✅ رسائل نجاح وأخطاء تفاعلية للمستخدم
-- ✅ حماية ضد هجمات CSRF و XSS
-- ✅ نظام صلاحيات لتأكيد ملكية التغريدة قبل التعديل أو الحذف
 
 ### 🇬🇧 English
 - ✅ Complete authentication system (Register, Login, Logout) with high security
@@ -41,7 +30,7 @@
 
 ## 🛠 التقنيات المستخدمة | Tech Stack
 
-| التقنية | Technology |
+| Technology |
 |---------|------------|
 | ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white) | **Laravel 12** - إطار العمل الخلفي (Backend Framework) |
 | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) | **PHP ^8.2** - لغة البرمجة |
@@ -195,9 +184,10 @@ chirper/
 
 ## 📞 التواصل | Contact
 
-- **المطور:** المهندس سلمان الانسي | Eng. Salman Al-Ansi
+- * Eng. Salman Al-Ansi
 - **GitHub:** [@salman-dev-ai](https://github.com/salman-dev-ai)
-- **البريد الإلكتروني:** (يُضاف لاحقاً)
+- **البريد الإلكتروني:
+- ** (salman.developer.ai@gmali.com)
 
 ---
 
