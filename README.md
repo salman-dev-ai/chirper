@@ -30,15 +30,25 @@
 
 ## 🛠 التقنيات المستخدمة | Tech Stack
 
-| Technology |
+## 🛠️ Technology Stack
 
-| ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white) | **Laravel 12** - إطار العمل الخلفي (Backend Framework) |
-| ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white) | **PHP ^8.2** - لغة البرمجة 
-| ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white) | **SQLite** - قاعدة البيانات (Database) 
+- ![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?style=flat&logo=laravel&logoColor=white)
+  **Laravel 12** — Backend Framework
 
-| ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)  **Tailwind CSS** - إطار العمل الأمامي (CSS Framework) |
-| ![DaisyUI](https://img.shields.io/badge/DaisyUI-5A0EF8?style=flat&logo=daisyui&logoColor=white) | **DaisyUI 5** - مكتبة مكونات واجهة المستخدم |
-| ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white) | **Vite** - أداة بناء الواجهة الأمامية 
+- ![PHP](https://img.shields.io/badge/PHP-8.2-777BB4?style=flat&logo=php&logoColor=white)
+  **PHP 8.2+** — Server-side Programming Language
+
+- ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
+  **SQLite** — Database
+
+- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+  **Tailwind CSS** — Utility-First CSS Framework
+
+- ![DaisyUI](https://img.shields.io/badge/DaisyUI-5A0EF8?style=flat&logo=daisyui&logoColor=white)
+  **DaisyUI 5** — UI Component Library
+
+- ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+  **Vite** — Frontend Build Tool
 
 ---
 
