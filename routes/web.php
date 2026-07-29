@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\Auth\Login;
 use App\Http\Controllers\Auth\Logout;
-use App\Http\Controllers\Auth\Register;
+// use App\Http\Controllers\Auth\Register;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ChirpController;
+
+use App\Livewire\Auth\Register;
+
 
 Route::get('/', [ChirpController::class, 'index']);
 
@@ -35,3 +38,10 @@ Route::post('login', Login::class)->middleware('guest');
 
 //Logout route
 Route::post('/logout', Logout::class)->middleware('auth')->name('logout');
+
+
+
+// use livewire
+
+
+// Route::get('/register',Register::class)->name('register');

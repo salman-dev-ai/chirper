@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts.app>
     <x-slot:title>
         Register
     </x-slot:title>
@@ -86,4 +86,4 @@
             </div>
         </div>
     </div>
-</x-layout>
+</x-layouts.app>
